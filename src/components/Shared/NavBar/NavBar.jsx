@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 const NavBar = () => {
   return (
     <div>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-orange-100 border-y-2 border-orange-200">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -51,26 +53,28 @@ const NavBar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li tabIndex={0}>
               <details>
                 <summary>Assignments</summary>
                 <ul className="p-2">
                   <li>
-                    <a>All Assignments</a>
+                    <Link to="/allAssignments">All Assignments</Link>
                   </li>
                   <li>
-                    <a>My Assignments</a>
+                    <Link to={"/myAssignments"}>My Assignments</Link>
                   </li>
                   <li>
-                    <a>Submitted Assignments</a>
+                    <Link to={"/submittedAssignments"}>
+                      Submitted Assignments
+                    </Link>
                   </li>
                 </ul>
               </details>
             </li>
             <li>
-              <a>Create Assignments</a>
+              <Link to={"/createAssignments"}>Create Assignments</Link>
             </li>
           </ul>
         </div>
