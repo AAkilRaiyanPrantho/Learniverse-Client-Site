@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -27,59 +27,63 @@ const NavBar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Home</a>
+                <NavLink>Home</NavLink>
               </li>
               <li>
                 <a>Assignments</a>
                 <ul className="p-2">
                   <li>
-                    <a>All Assignments</a>
+                    <NavLink>All Assignments</NavLink>
                   </li>
                   <li>
-                    <a>My Assignments</a>
+                    <NavLink>My Assignments</NavLink>
                   </li>
                   <li>
-                    <a>Submitted Assignments</a>
+                    <NavLink>Submitted Assignments</NavLink>
                   </li>
                 </ul>
               </li>
               <li>
-                <a>Create Assignments</a>
+                <NavLink>Create Assignments</NavLink>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">LearniVerse</a>
+          <Link to={'/'}>LearniVerse</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li tabIndex={0}>
               <details>
                 <summary>Assignments</summary>
                 <ul className="p-2">
                   <li>
-                    <Link to="/allAssignments">All Assignments</Link>
+                    <NavLink to="/allAssignments">All Assignments</NavLink>
                   </li>
                   <li>
-                    <Link to={"/myAssignments"}>My Assignments</Link>
+                    <NavLink to={"/myAssignments"}>My Assignments</NavLink>
                   </li>
                   <li>
-                    <Link to={"/submittedAssignments"}>
+                    <NavLink to={"/submittedAssignments"}>
                       Submitted Assignments
-                    </Link>
+                    </NavLink>
                   </li>
                 </ul>
               </details>
             </li>
             <li>
-              <Link to={"/createAssignments"}>Create Assignments</Link>
+              <NavLink to={"/createAssignments"}>Create Assignments</NavLink>
             </li>
           </ul>
         </div>
         <div className="navbar-end">
-          <Link to={'/signUp'}>Register</Link>
+          <ul>
+            <li>
+            <NavLink to={'/signUp'}><button className="btn btn-ghost">Register</button></NavLink>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
