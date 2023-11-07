@@ -1,22 +1,19 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-import './index.css'
+import "./index.css";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import Home from './components/Home/Home/Home';
-import AuthProvider from './components/AuthProviders/AuthProvider';
-import ErrorPage from './components/Shared/ErrorPage/ErrorPage';
-import AllAssignments from './components/AllAssignments/AllAssignments';
-import Root from './Root/Root';
-import MyAssignments from './components/MyAssignments/MyAssignments';
-import SubmittedAssignments from './components/SubmittedAssignments/SubmittedAssignments';
-import CreateAssignments from './components/CreateAssignments/CreateAssignments';
-
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./components/Home/Home/Home";
+import AuthProvider from "./components/AuthProviders/AuthProvider";
+import ErrorPage from "./components/Shared/ErrorPage/ErrorPage";
+import AllAssignments from "./components/AllAssignments/AllAssignments";
+import Root from "./Root/Root";
+import MyAssignments from "./components/MyAssignments/MyAssignments";
+import SubmittedAssignments from "./components/SubmittedAssignments/SubmittedAssignments";
+import CreateAssignments from "./components/CreateAssignments/CreateAssignments";
+import SignUp from "./components/SignUp/SignUp";
+import SignIn from "./components/SignIn/SignIn";
 
 const router = createBrowserRouter([
   {
@@ -25,33 +22,41 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
-        path: '/',
-        element:<Home></Home>,
+        path: "/",
+        element: <Home></Home>,
       },
       {
-        path: '/allAssignments',
-        element:<AllAssignments></AllAssignments>,
+        path: "/allAssignments",
+        element: <AllAssignments></AllAssignments>,
       },
       {
-        path: '/myAssignments',
-        element:<MyAssignments></MyAssignments>,
+        path: "/myAssignments",
+        element: <MyAssignments></MyAssignments>,
       },
       {
-        path: '/submittedAssignments',
-        element:<SubmittedAssignments></SubmittedAssignments>,
+        path: "/submittedAssignments",
+        element: <SubmittedAssignments></SubmittedAssignments>,
       },
       {
-        path: '/createAssignments',
-        element:<CreateAssignments></CreateAssignments>,
+        path: "/createAssignments",
+        element: <CreateAssignments></CreateAssignments>,
       },
-    ]
+      {
+        path: "/signUp",
+        element: <SignUp></SignUp>,
+      },
+      {
+        path: "/signIn",
+        element: <SignIn></SignIn>,
+      },
+    ],
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
       <RouterProvider router={router} />
     </AuthProvider>
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);

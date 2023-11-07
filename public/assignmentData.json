@@ -1,0 +1,82 @@
+[
+    {
+      "id": 1,
+      "title": "Introduction to JavaScript",
+      "description": "Learn the basics of JavaScript programming.",
+      "marks": 100,
+      "thumbnail": "https://example.com/thumbnail1.jpg",
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "title": "HTML and CSS Project",
+      "description": "Build a simple webpage using HTML and CSS.",
+      "marks": 150,
+      "thumbnail": "https://example.com/thumbnail2.jpg",
+      "difficulty": "medium"
+    },
+    {
+      "id": 3,
+      "title": "Database Design",
+      "description": "Create a database schema for a fictional e-commerce site.",
+      "marks": 200,
+      "thumbnail": "https://example.com/thumbnail3.jpg",
+      "difficulty": "medium"
+    },
+    {
+      "id": 4,
+      "title": "Advanced JavaScript Topics",
+      "description": "Explore advanced JavaScript concepts like closures and promises.",
+      "marks": 250,
+      "thumbnail": "https://example.com/thumbnail4.jpg",
+      "difficulty": "hard"
+    },
+    {
+      "id": 5,
+      "title": "Python Programming Challenge",
+      "description": "Solve complex Python programming problems.",
+      "marks": 180,
+      "thumbnail": "https://example.com/thumbnail5.jpg",
+      "difficulty": "medium"
+    },
+    {
+      "id": 6,
+      "title": "Machine Learning Assignment",
+      "description": "Implement a machine learning algorithm for image classification.",
+      "marks": 300,
+      "thumbnail": "https://example.com/thumbnail6.jpg",
+      "difficulty": "hard"
+    },
+    {
+      "id": 7,
+      "title": "Web Security Project",
+      "description": "Identify and fix security vulnerabilities in a web application.",
+      "marks": 220,
+      "thumbnail": "https://example.com/thumbnail7.jpg",
+      "difficulty": "hard"
+    },
+    {
+      "id": 8,
+      "title": "Data Analysis Challenge",
+      "description": "Analyze a large dataset and draw meaningful insights.",
+      "marks": 270,
+      "thumbnail": "https://example.com/thumbnail8.jpg",
+      "difficulty": "medium"
+    },
+    {
+      "id": 9,
+      "title": "Network Configuration Task",
+      "description": "Set up and configure a network infrastructure for a small business.",
+      "marks": 160,
+      "thumbnail": "https://example.com/thumbnail9.jpg",
+      "difficulty": "medium"
+    },
+    {
+      "id": 10,
+      "title": "Mobile App Development",
+      "description": "Create a mobile app for a specific use case.",
+      "marks": 280,
+      "thumbnail": "https://example.com/thumbnail10.jpg",
+      "difficulty": "hard"
+    }
+  ]
