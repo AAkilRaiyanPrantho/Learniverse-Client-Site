@@ -41,7 +41,7 @@ const CreateAssignments = () => {
               >
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Title</span>
+                    <span className="label-text">Assignment Title</span>
                   </label>
                   <input
                     type="text"
@@ -53,7 +53,7 @@ const CreateAssignments = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Thumbnail</span>
+                    <span className="label-text">Assignment Thumbnail</span>
                   </label>
                   <input
                     type="url"
@@ -82,7 +82,7 @@ const CreateAssignments = () => {
 
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Marks</span>
+                    <span className="label-text">Assignment Marks</span>
                   </label>
                   <input
                     type="text"

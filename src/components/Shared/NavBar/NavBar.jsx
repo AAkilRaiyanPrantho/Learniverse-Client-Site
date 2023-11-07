@@ -27,38 +27,38 @@ const NavBar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <NavLink>Home</NavLink>
+                <NavLink to="/">Home</NavLink>
               </li>
               <li>
                 <a>Assignments</a>
                 <ul className="p-2">
                   <li>
-                    <NavLink>All Assignments</NavLink>
+                    <NavLink to="/allAssignments">All Assignments</NavLink>
                   </li>
                   <li>
-                    <NavLink>My Assignments</NavLink>
+                    <NavLink to="/myAssignments">My Assignments</NavLink>
                   </li>
                   <li>
-                    <NavLink>Submitted Assignments</NavLink>
+                    <NavLink to="/submittedAssignments">Submitted Assignments</NavLink>
                   </li>
                 </ul>
               </li>
               <li>
-                <NavLink>Create Assignments</NavLink>
+                <NavLink to="/createAssignments">Create Assignments</NavLink>
               </li>
             </ul>
           </div>
           <Link to={'/'}>LearniVerse</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 gap-4">
             <li>
               <NavLink to="/">Home</NavLink>
             </li>
             <li tabIndex={0}>
               <details>
                 <summary>Assignments</summary>
-                <ul className="p-2">
+                <ul className="flex w-[500px] p-2 gap-4 bg-orange-100 border-y-1 border-orange-200">
                   <li>
                     <NavLink to="/allAssignments">All Assignments</NavLink>
                   </li>
