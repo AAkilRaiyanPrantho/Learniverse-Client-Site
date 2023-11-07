@@ -1,4 +1,14 @@
+import { useState } from "react";
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
+
+
 const CreateAssignments = () => {
+
+    const [selectedDate, setSelectedDate] = useState(null);
+
+
   const handleCreateAssignments = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -6,9 +16,10 @@ const CreateAssignments = () => {
     const thumbnail = form.thumbnail.value;
     const assignmentDifficultyLevel = form.assignmentDifficultyLevel.value;
     const marks = form.marks.value;
+    const dueDate = form.dueDate.value;
     const assignmentDescription = form.assignmentDescription.value;
 
-    const newAssignment = { title, thumbnail, assignmentDifficultyLevel, marks, assignmentDescription };
+    const newAssignment = { title, thumbnail, assignmentDifficultyLevel, marks, assignmentDescription,dueDate };
     console.log(newAssignment);
   };
 
@@ -93,10 +104,23 @@ const CreateAssignments = () => {
                     required
                   />
                 </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Assignment Due Date</span>
+                  </label>
+                  <DatePicker name="dueDate" className="input input-bordered w-full" selected={selectedDate} onChange={(date) => setSelectedDate(date)} />
+                  {/* <input
+                    type="text"
+                    name="dueDate"
+                    placeholder="Assignment Due Date"
+                    className="input input-bordered"
+                    required
+                  /> */}
+                </div>
 
                 <div className="form-control mt-6">
                   <button className="btn outline outline-[#ee4747] text-[#ee4747]">
-                    Add Product
+                    Add Assignment
                   </button>
                 </div>
               </form>
