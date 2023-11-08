@@ -14,6 +14,7 @@ import SubmittedAssignments from "./components/SubmittedAssignments/SubmittedAss
 import CreateAssignments from "./components/CreateAssignments/CreateAssignments";
 import SignUp from "./components/SignUp/SignUp";
 import SignIn from "./components/SignIn/SignIn";
+import AssignmentDetails from "./components/AssignmentDetails/AssignmentDetails";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,12 @@ const router = createBrowserRouter([
       {
         path: "/signIn",
         element: <SignIn></SignIn>,
+      },
+      {
+        path: "/details/:id",
+        element: <AssignmentDetails></AssignmentDetails>,
+        loader: () => fetch('http://localhost:5000/assignments')
+        
       },
     ],
   },

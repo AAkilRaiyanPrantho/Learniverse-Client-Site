@@ -10,15 +10,12 @@ const Banner = () => {
             }}
           >
             <div className="hero-overlay bg-gradient-to-r from-[#1515155b] to-[#1515153d]"></div>
-            <div className="hero-content text-center text-neutral-content">
+            <div className="hero-content text-center text-neutral-content lg:pr-[1000px] lg:text-left">
               <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+                <h1 className="mb-5 text-5xl font-bold">Learn Together, Grow Together</h1>
                 <p className="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                Join our supportive community of learners where your growth and success are our priorities
                 </p>
-                <button className="btn btn-primary">Get Started</button>
               </div>
             </div>
           </div>
@@ -34,13 +31,11 @@ const Banner = () => {
             <div className="hero-overlay bg-gradient-to-r from-[#1515155b] to-[#1515153d]"></div>
             <div className="hero-content text-center text-neutral-content">
               <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+                <h1 className="mb-5 text-5xl font-bold">Empowering Learning, Enriching Lives</h1>
                 <p className="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                We believe that education has the power to transform lives, and we're here to empower your learning journey
                 </p>
-                <button className="btn btn-primary">Get Started</button>
+                
               </div>
             </div>
           </div>
@@ -55,15 +50,12 @@ const Banner = () => {
             }}
           >
             <div className="hero-overlay bg-gradient-to-r from-[#1515155b] to-[#1515153d]"></div>
-            <div className="hero-content text-center text-neutral-content">
+            <div className="hero-content text-center text-neutral-content lg:pl-[1000px] lg:text-right">
               <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+                <h1 className="mb-5 text-5xl font-bold">Diversity in Unity, Learning in Harmony</h1>
                 <p className="mb-5">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                Explore diverse subjects and cultures as we come together to learn in harmony.
                 </p>
-                <button className="btn btn-primary">Get Started</button>
               </div>
             </div>
           </div>

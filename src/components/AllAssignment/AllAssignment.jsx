@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const AllAssignment = ({ assignment }) => {
   const {
@@ -40,7 +41,8 @@ const AllAssignment = ({ assignment }) => {
           <p>Created By {assignmentCreatorName}</p>
           <p>Due Date: {dueDate}</p>
           <div className="card-actions justify-center">
-            <button className="btn btn-info">View Assignment</button>
+            <Link to={`/details/:${_id}`}><button className="btn btn-info">View Assignment</button></Link>
+            
             <button className="btn btn-success">Update Assignment</button>
             <button className="btn btn-error">Delete Assignment</button>
           </div>
