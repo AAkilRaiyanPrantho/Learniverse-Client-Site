@@ -1,82 +1,62 @@
 [
-    {
-      "id": 1,
-      "title": "Introduction to JavaScript",
-      "description": "Learn the basics of JavaScript programming.",
-      "marks": 100,
-      "thumbnail": "https://example.com/thumbnail1.jpg",
-      "difficulty": "easy"
-    },
-    {
-      "id": 2,
-      "title": "HTML and CSS Project",
-      "description": "Build a simple webpage using HTML and CSS.",
-      "marks": 150,
-      "thumbnail": "https://example.com/thumbnail2.jpg",
-      "difficulty": "medium"
-    },
-    {
-      "id": 3,
-      "title": "Database Design",
-      "description": "Create a database schema for a fictional e-commerce site.",
-      "marks": 200,
-      "thumbnail": "https://example.com/thumbnail3.jpg",
-      "difficulty": "medium"
-    },
-    {
-      "id": 4,
-      "title": "Advanced JavaScript Topics",
-      "description": "Explore advanced JavaScript concepts like closures and promises.",
-      "marks": 250,
-      "thumbnail": "https://example.com/thumbnail4.jpg",
-      "difficulty": "hard"
-    },
-    {
-      "id": 5,
-      "title": "Python Programming Challenge",
-      "description": "Solve complex Python programming problems.",
-      "marks": 180,
-      "thumbnail": "https://example.com/thumbnail5.jpg",
-      "difficulty": "medium"
-    },
-    {
-      "id": 6,
-      "title": "Machine Learning Assignment",
-      "description": "Implement a machine learning algorithm for image classification.",
-      "marks": 300,
-      "thumbnail": "https://example.com/thumbnail6.jpg",
-      "difficulty": "hard"
-    },
-    {
-      "id": 7,
-      "title": "Web Security Project",
-      "description": "Identify and fix security vulnerabilities in a web application.",
-      "marks": 220,
-      "thumbnail": "https://example.com/thumbnail7.jpg",
-      "difficulty": "hard"
-    },
-    {
-      "id": 8,
-      "title": "Data Analysis Challenge",
-      "description": "Analyze a large dataset and draw meaningful insights.",
-      "marks": 270,
-      "thumbnail": "https://example.com/thumbnail8.jpg",
-      "difficulty": "medium"
-    },
-    {
-      "id": 9,
-      "title": "Network Configuration Task",
-      "description": "Set up and configure a network infrastructure for a small business.",
-      "marks": 160,
-      "thumbnail": "https://example.com/thumbnail9.jpg",
-      "difficulty": "medium"
-    },
-    {
-      "id": 10,
-      "title": "Mobile App Development",
-      "description": "Create a mobile app for a specific use case.",
-      "marks": 280,
-      "thumbnail": "https://example.com/thumbnail10.jpg",
-      "difficulty": "hard"
-    }
-  ]
+  {
+    "title": "Introduction to JavaScript",
+    "description": "In this assignment, you'll learn the basics of JavaScript programming. Dive into variables, functions, and more to kickstart your coding journey.",
+    "thumbnail": "https://i.ibb.co/k0mwg3X/Cards-1.jpg",
+    "marks": 100
+  },
+  {
+    "title": "HTML and CSS Project",
+    "description": "Build a simple webpage using HTML and CSS. Create a personal website from scratch and style it with CSS to showcase your skills.",
+    "thumbnail": "https://i.ibb.co/y5gDC9G/Cards-1.jpg",
+    "marks": 80
+  },
+  {
+    "title": "Database Design",
+    "description": "Your task is to create a database schema for a fictional e-commerce site. Design the structure that will power an online store with efficiency and scalability.",
+    "thumbnail": "https://i.ibb.co/mRN39L5/Cards-2.jpg",
+    "marks": 90
+  },
+  {
+    "title": "Advanced JavaScript Topics",
+    "description": "Explore advanced JavaScript concepts like closures and promises. Solve challenging problems and master the intricacies of this versatile language.",
+    "thumbnail": "https://i.ibb.co/tCnsBTF/Cards-1.png",
+    "marks": 70
+  },
+  {
+    "title": "Python Programming Challenge",
+    "description": "Take on complex Python programming problems. Test your problem-solving skills and write efficient, elegant Python code.",
+    "thumbnail": "https://i.ibb.co/tCnsBTF/Cards-1.png",
+    "marks": 95
+  },
+  {
+    "title": "Machine Learning Assignment",
+    "description": "Implement a machine learning algorithm for image classification. Dive into the world of AI and enhance your skills in machine learning.",
+    "thumbnail": "https://i.ibb.co/FwnJHnG/Cards-3.png",
+    "marks": 85
+  },
+  {
+    "title": "Web Security Project",
+    "description": "Identify and fix security vulnerabilities in a web application. Learn the art of securing web systems and applications.",
+    "thumbnail": "https://i.ibb.co/FwnJHnG/Cards-3.png",
+    "marks": 75
+  },
+  {
+    "title": "Data Analysis Challenge",
+    "description": "Analyze a large dataset and draw meaningful insights. Discover patterns and trends hidden within data and present your findings.",
+    "thumbnail": "https://i.ibb.co/FwnJHnG/Cards-3.png",
+    "marks": 65
+  },
+  {
+    "title": "Network Configuration Task",
+    "description": "Set up and configure a network infrastructure for a small business. Design, implement, and optimize a network to meet specific business needs.",
+    "thumbnail": "https://i.ibb.co/FwnJHnG/Cards-3.png",
+    "marks": 90
+  },
+  {
+    "title": "Mobile App Development",
+    "description": "Create a mobile app for a specific use case. From concept to app store submission, turn your app development idea into reality.",
+    "thumbnail": "https://i.ibb.co/FwnJHnG/Cards-3.png",
+    "marks": 80
+  }
+]
