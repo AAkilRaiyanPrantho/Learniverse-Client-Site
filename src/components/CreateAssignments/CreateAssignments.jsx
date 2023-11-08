@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import DatePicker from "react-datepicker";
+import Swal from 'sweetalert2'
 
 import "react-datepicker/dist/react-datepicker.css";
+import { AuthContext } from "../AuthProviders/AuthProvider";
 
 
 const CreateAssignments = () => {
 
     const [selectedDate, setSelectedDate] = useState(null);
+    const {user} = useContext(AuthContext);
 
 
   const handleCreateAssignments = (e) => {
@@ -18,9 +21,34 @@ const CreateAssignments = () => {
     const marks = form.marks.value;
     const dueDate = form.dueDate.value;
     const assignmentDescription = form.assignmentDescription.value;
+    const assignmentCreatorName = user.displayName;
+    const assignmentCreatorMail = user.email;
 
-    const newAssignment = { title, thumbnail, assignmentDifficultyLevel, marks, assignmentDescription,dueDate };
+    const newAssignment = { title, thumbnail, assignmentDifficultyLevel, marks, assignmentDescription,dueDate,assignmentCreatorName,assignmentCreatorMail };
     console.log(newAssignment);
+
+
+    // Sending assignment to the server
+    fetch('http://localhost:5000/assignments',{
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(newAssignment)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+      if(data.insertedId){
+        Swal.fire({
+          title: 'Congratulations',
+          text: 'Data Entry Successful!',
+          icon: 'success',
+          confirmButtonText: 'Cool'
+        })
+
+      }
+    })
   };
 
   return (
