@@ -1,11 +1,7 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
-
 import "./index.css";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home/Home/Home";
-import AuthProvider from "./components/AuthProviders/AuthProvider";
 import ErrorPage from "./components/Shared/ErrorPage/ErrorPage";
 import AllAssignments from "./components/AllAssignments/AllAssignments";
 import Root from "./Root/Root";
@@ -15,8 +11,13 @@ import CreateAssignments from "./components/CreateAssignments/CreateAssignments"
 import SignUp from "./components/SignUp/SignUp";
 import SignIn from "./components/SignIn/SignIn";
 import AssignmentDetails from "./components/AssignmentDetails/AssignmentDetails";
+import AuthProvider from "./components/AuthProviders/AuthProvider";
+import React from "react";
+import PrivateRoute from "./routes/PrivateRoute";
 
-const router = createBrowserRouter([
+
+const router = createBrowserRouter(
+  [
   {
     path: "/",
     element: <Root></Root>,
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/createAssignments",
-        element: <CreateAssignments></CreateAssignments>,
+        element:<PrivateRoute><CreateAssignments></CreateAssignments></PrivateRoute>,
       },
       {
         path: "/signUp",

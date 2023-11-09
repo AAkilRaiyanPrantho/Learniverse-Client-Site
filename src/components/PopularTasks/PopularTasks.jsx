@@ -3,7 +3,7 @@ const PopularTasks = () => {
   return (
     <div>
       <h1 className="text-center font-bold text-4xl">Feature Section</h1>
-      <div className="grid grid-cols-1 lg:grid-cols-3 w-3/4 mx-auto my-8">
+      <div className="grid max-lg:grid-cols-1 p-4 gap-y-4 lg:grid-cols-3 lg:w-3/4 lg:mx-auto lg:my-8 md:max-lg:flex md:max-lg:flex-col md:max-lg:justify-center md:max-lg:items-center">
         {/* card1 */}
         <div className="card w-96 bg-base-100 shadow-xl image-full">
           <figure>
