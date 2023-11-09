@@ -14,6 +14,7 @@ import AssignmentDetails from "./components/AssignmentDetails/AssignmentDetails"
 import AuthProvider from "./components/AuthProviders/AuthProvider";
 import React from "react";
 import PrivateRoute from "./routes/PrivateRoute";
+import UpdateAssignments from "./components/UpdateAssignments/UpdateAssignments";
 
 
 const router = createBrowserRouter(
@@ -34,16 +35,20 @@ const router = createBrowserRouter(
       },
       {
         path: "/myAssignments",
-        element: <MyAssignments></MyAssignments>,
+        element:<PrivateRoute><MyAssignments></MyAssignments></PrivateRoute>,
       },
       {
         path: "/submittedAssignments",
-        element: <SubmittedAssignments></SubmittedAssignments>,
+        element:<PrivateRoute><SubmittedAssignments></SubmittedAssignments></PrivateRoute>,
         loader: () => fetch('http://localhost:5000/submissions')
       },
       {
         path: "/createAssignments",
         element:<PrivateRoute><CreateAssignments></CreateAssignments></PrivateRoute>,
+      },
+      {
+        path: "/updateAssignments/:id",
+        element:<PrivateRoute><UpdateAssignments></UpdateAssignments></PrivateRoute>,
       },
       {
         path: "/signUp",
@@ -55,7 +60,7 @@ const router = createBrowserRouter(
       },
       {
         path: "/details/:id",
-        element: <AssignmentDetails></AssignmentDetails>,
+        element:<PrivateRoute><AssignmentDetails></AssignmentDetails></PrivateRoute>,
         loader: () => fetch('http://localhost:5000/assignments')
         
       },

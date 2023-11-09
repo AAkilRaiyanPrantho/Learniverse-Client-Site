@@ -42,8 +42,8 @@ const AllAssignment = ({ assignment }) => {
           <p>Due Date: {dueDate}</p>
           <div className="card-actions justify-center">
             <Link to={`/details/${_id}`}><button className="btn btn-info">View Assignment</button></Link>
+            <Link to={`/updateAssignments/${_id}`}><button className="btn btn-success">Update Assignment</button></Link>
             
-            <button className="btn btn-success">Update Assignment</button>
             <button className="btn btn-error">Delete Assignment</button>
           </div>
         </div>

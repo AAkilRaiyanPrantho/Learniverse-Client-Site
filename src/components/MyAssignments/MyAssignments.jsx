@@ -1,35 +1,36 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../AuthProviders/AuthProvider";
-import MyAssignment from "../MyAssignment/MyAssignment";
+// import MyAssignment from "../MyAssignment/MyAssignment";
 
 const MyAssignments = () => {
     const { user } = useContext(AuthContext);
 
-    const [myAssignments, setMyAssignments] = useState([]);
+    const [myWorks, setMyWorks] = useState([]);
 
 
-    const url = `http://localhost:5000/mySubmissions?submitterEmail=${user.email}`;
+    const url = `http://localhost:5000/mySubmissions?submitterEmail=${user?.email}`;
 
     useEffect(() => {
         fetch(url)
-        .then(res => res.json())
-        .then(data => console.log(data))
-        .then(data => setMyAssignments(data))
-    })
+        .then((res) => res.json())
+        // .then((data) => console.log(data))
+        .then((data) => setMyWorks(data))
+    },[])
 
-    console.log(myAssignments)
+    console.log(myWorks)
 
     
     return (
         <div>
             <h1 className="text-center font-bold text-4xl">My Assignments Section</h1>
-            <div>
+            <h1>Total Assignments: {myWorks.length}</h1>
+            {/* <div>
                 {
                     myAssignments.map(
                         (myAssignment) => <MyAssignment key={myAssignment._id} myAssignment={myAssignment}></MyAssignment>
                     )
                 }
-            </div>
+            </div> */}
         </div>
     );
 };
