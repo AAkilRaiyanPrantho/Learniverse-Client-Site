@@ -2,7 +2,8 @@ import { Link, NavLink } from "react-router-dom";
 import "./NavBar.css";
 import { AuthContext } from "../../AuthProviders/AuthProvider";
 import { useContext } from "react";
-import { FaDoorOpen } from "react-icons/fa6";
+import { FaDoorOpen,FaGraduationCap } from "react-icons/fa6";
+
 
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -62,11 +63,11 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-          <Link to={"/"}><p>
-            <span className="text-[#a855f7] font-extrabold text-3xl">L</span>EARNi
+          <Link to={"/"}><div className="flex justify-center items-center"><FaGraduationCap className="text-3xl text-[#ec0d6a] font-extrabold"></FaGraduationCap><p>
+            <span className="text-[#9234eb] font-extrabold text-3xl">L</span>EARNi
             <span className="text-[#ec4899] font-extrabold text-3xl">V</span>
             ERSE
-          </p></Link>
+          </p></div></Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-4">
