@@ -15,8 +15,12 @@ const AssignmentDetails = () => {
     const note = form.note.value;
     const submitterName = user.displayName;
     const submitterEmail = user.email;
+    const assignmentTitle = detail.title;
+    const total = detail.marks;
+    const status = 'pending';
+    const marks = 'pending';
 
-    const submittedAssignment = { pdf, note, submitterName, submitterEmail };
+    const submittedAssignment = { pdf, note, submitterName, submitterEmail,assignmentTitle,total,status,marks };
     console.log(submittedAssignment);
 
     // Sending submissions to the server
