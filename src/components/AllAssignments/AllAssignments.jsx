@@ -1,9 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import AllAssignment from "../AllAssignment/AllAssignment";
+import { useContext } from "react";
+import { AuthContext } from "../AuthProviders/AuthProvider";
 
 
 const AllAssignments = () => {
   const assignments = useLoaderData();
+  const {user} = useContext(AuthContext);
+  console.log(user)
 
   return (
     <div>

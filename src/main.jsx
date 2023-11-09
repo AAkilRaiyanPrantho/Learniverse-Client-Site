@@ -15,6 +15,7 @@ import AuthProvider from "./components/AuthProviders/AuthProvider";
 import React from "react";
 import PrivateRoute from "./routes/PrivateRoute";
 import UpdateAssignments from "./components/UpdateAssignments/UpdateAssignments";
+import SingleAssignmentChecking from "./components/SingleAssignment/SingleAssignmentChecking";
 
 
 const router = createBrowserRouter(
@@ -31,7 +32,7 @@ const router = createBrowserRouter(
       {
         path: "/allAssignments",
         element: <AllAssignments></AllAssignments>,
-        loader: () => fetch('http://localhost:5000/assignments')
+        loader: () => fetch('https://programming-hero-assignment-11-server.vercel.app/assignments')
       },
       {
         path: "/myAssignments",
@@ -40,7 +41,12 @@ const router = createBrowserRouter(
       {
         path: "/submittedAssignments",
         element:<PrivateRoute><SubmittedAssignments></SubmittedAssignments></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/submissions')
+        loader: () => fetch('https://programming-hero-assignment-11-server.vercel.app/submissions')
+      },
+      {
+        path: "/SingleAssignmentChecking/:id",
+        element:<PrivateRoute><SingleAssignmentChecking></SingleAssignmentChecking></PrivateRoute>,
+        loader: ({params}) => fetch(`https://programming-hero-assignment-11-server.vercel.app/submissions/${params.id}`)
       },
       {
         path: "/createAssignments",
@@ -49,6 +55,7 @@ const router = createBrowserRouter(
       {
         path: "/updateAssignments/:id",
         element:<PrivateRoute><UpdateAssignments></UpdateAssignments></PrivateRoute>,
+        loader: ({params}) => fetch(`https://programming-hero-assignment-11-server.vercel.app/assignments/${params.id}`)
       },
       {
         path: "/signUp",
@@ -61,7 +68,7 @@ const router = createBrowserRouter(
       {
         path: "/details/:id",
         element:<PrivateRoute><AssignmentDetails></AssignmentDetails></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/assignments')
+        loader: () => fetch('https://programming-hero-assignment-11-server.vercel.app/assignments')
         
       },
     ],

@@ -29,7 +29,7 @@ const CreateAssignments = () => {
 
 
     // Sending assignment to the server
-    fetch('http://localhost:5000/assignments',{
+    fetch('https://programming-hero-assignment-11-server.vercel.app/assignments',{
       method: 'POST',
       headers: {
         'content-type': 'application/json'

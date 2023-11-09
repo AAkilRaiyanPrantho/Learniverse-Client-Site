@@ -19,12 +19,13 @@ const AssignmentDetails = () => {
     const total = detail.marks;
     const status = 'pending';
     const marks = 'pending';
+    const feedback = 'pending';
 
-    const submittedAssignment = { pdf, note, submitterName, submitterEmail,assignmentTitle,total,status,marks };
+    const submittedAssignment = { pdf, note, submitterName, submitterEmail,assignmentTitle,total,status,marks,feedback };
     console.log(submittedAssignment);
 
     // Sending submissions to the server
-    fetch("http://localhost:5000/submissions", {
+    fetch("https://programming-hero-assignment-11-server.vercel.app/submissions", {
       method: "POST",
       headers: {
         "content-type": "application/json",

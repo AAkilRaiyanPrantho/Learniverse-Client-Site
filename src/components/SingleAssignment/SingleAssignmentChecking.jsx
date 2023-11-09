@@ -1,35 +1,17 @@
-import PropTypes from "prop-types";
-
+// import { useContext } from "react";
 import Swal from "sweetalert2";
+// import { AuthContext } from "../AuthProviders/AuthProvider";
+import { useLoaderData } from "react-router-dom";
 
 
-const SingleAssignment = ({submission}) => {
-    const {
-        _id,
-        pdf,
-        note,
-        submitterName,
-        submitterEmail,
-        assignmentTitle,
-        total,
-        status,
-        marks,
-        feedback
-      } = submission;
-      console.log(
-        _id,
-        pdf,
-        note,
-        submitterName,
-        submitterEmail,
-        assignmentTitle,
-        total,
-        status,
-        marks,
-        feedback
-      );
-      
-      // handleFunction
+const SingleAssignmentChecking = () => {
+
+    const data = useLoaderData();
+    console.log(data)
+    const {_id,pdf,note} = data;
+
+
+    // handleFunction
     const handleCheckingAssignment = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -64,50 +46,18 @@ const SingleAssignment = ({submission}) => {
           }
         })
       };
-
-
-
     return (
         <div>
-            <div className="card w-96 glass shadow-xl shadow-orange-300">
-        <div className="card-body">
-          <h2 className="card-title">{assignmentTitle}</h2>
-          <p className="font-semibold">Submitted By: {submitterName}</p>
-          <p>Status: {status}</p>
-          <p>Total Marks: {total}</p>
-          <p>My Obtained Marks: {marks}</p>
-          <p>Feedback: {feedback}</p>
-          {/* <Link to={`/SingleAssignmentChecking/${_id}`}>
-          <button
-            className="btn btn-outline btn-warning"
-          >
-            Examine Assignment
-          </button>
-          </Link> */}
-          <div className="mb-4">
-          {/* <Link to={`/allAssignments`}><button className="btn btn-ghost outline outline-[#ee4747] text-[#ee4747]">
-            Attempt Assignment
-          </button></Link> */}
-
-          <button
-            className="btn btn-outline btn-warning"
-            onClick={() => document.getElementById("my_modal_3").showModal()}
-          >
-            Examine Assignment
-          </button>
-          <dialog id="my_modal_3" className="modal">
-            <div className="modal-box">
-              <form method="dialog">
-                {/* if there is a button in form, it will close the modal */}
-                <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-                  ✕
-                </button>
-              </form>
-              <div>
-                <h1>Answer Script</h1>
-                <p>{pdf}</p>
-                <h1>Additional Note</h1>
-                <p>{note}</p>
+            <div className="flex flex-col justify-center items-center">
+            <h1 className="text-5xl font-bold">
+                {" "}
+                <span className="text-[#ee4747]">Check </span>Assignment!
+              </h1>
+            <div>
+                <h1 className="border-2">Answer Script</h1>
+                <p className="border-2">{pdf}</p>
+                <h1 className="border-2">Additional Note</h1>
+                <p className="border-2">{note}</p>
               </div>
               <form
                 onSubmit={handleCheckingAssignment}
@@ -158,17 +108,8 @@ const SingleAssignment = ({submission}) => {
                 </div>
               </form>
             </div>
-          </dialog>
-        </div>
-          
-        </div>
-      </div>
         </div>
     );
 };
 
-SingleAssignment.propTypes = {
-    submission: PropTypes.object,
-  };
-
-export default SingleAssignment;
+export default SingleAssignmentChecking;

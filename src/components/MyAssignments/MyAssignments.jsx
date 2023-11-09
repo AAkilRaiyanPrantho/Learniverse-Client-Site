@@ -8,7 +8,7 @@ const MyAssignments = () => {
     const [myWorks, setMyWorks] = useState([]);
 
 
-    const url = `http://localhost:5000/mySubmissions?submitterEmail=${user?.email}`;
+    const url = `https://programming-hero-assignment-11-server.vercel.app/mySubmissions?submitterEmail=${user?.email}`;
 
     useEffect(() => {
         fetch(url)
