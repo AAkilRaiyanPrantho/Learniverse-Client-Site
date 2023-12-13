@@ -70,7 +70,7 @@ const AllAssignment = ({ assignment }) => {
           if(data.deletedCount > 0){
             Swal.fire({
           title: "Deleted!",
-          text: "Assignment has been deleted.",
+          text: "Assignment has been deleted. Please Reload the page to see the results",
           icon: "success"
         });
           }
@@ -101,7 +101,12 @@ const AllAssignment = ({ assignment }) => {
           <div className="card-actions justify-center">
             <Link to={`/details/${_id}`}><button className="btn btn-info">View Assignment</button></Link>
             <Link to={`/updateAssignments/${_id}`}><button className="btn btn-success">Update Assignment</button></Link>
-            {user.email === assignmentCreatorMail ? (<button onClick={() => handleDelete(_id)} className="btn btn-error">Delete Assignment</button>):(<button onClick={(handleError)} className="btn btn-error">Delete Assignment</button>)}
+            {user?
+            <>{user.email === assignmentCreatorMail?  (<button onClick={() => handleDelete(_id)} className="btn btn-error">Delete Assignment</button>):(<button onClick={(handleError)} className="btn btn-error">Delete Assignment</button>)}</>:
+            <>
+            <button onClick={(handleError)} className="btn btn-error">Delete Assignment</button>
+            </>}
+            
             
           </div>
         </div>
