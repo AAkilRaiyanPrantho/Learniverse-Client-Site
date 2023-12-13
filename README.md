@@ -1,5 +1,5 @@
 Site Name: Learniverse
-Live Link: https://programming-hero-assignment-11.web.app
+Live Link: https://learniverse-education.netlify.app/
 Features:
     =>Users will be create assignments of their own
     =>Users can take part in assignments
