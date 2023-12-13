@@ -1,3 +1,4 @@
+import Discussions from "../../Discussions/Discussions";
 import Features from "../../Features/Features";
 import Notifications from "../../Notifications/Notifications";
 import PopularTasks from "../../PopularTasks/PopularTasks";
@@ -14,6 +15,7 @@ const Home = () => {
            <PopularTasks></PopularTasks>
            <Features></Features>
            <FAQ></FAQ>
+           <Discussions></Discussions>
             
         </div>
     );
